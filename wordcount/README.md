@@ -16,7 +16,7 @@ npm install -S eleventy-plugin-wordcount
 2. Create or modify your `.eleventy.js` and add the plugin
 
 ```javascript
-const wordCount = require("eleventy-plugin-wordcount");
+const { wordCount } = require("eleventy-plugin-wordcount");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(wordCount);

@@ -1,6 +1,6 @@
 {
   "name": "eleventy-plugin-wordcount",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An eleventy plugin to calcutate an articles word count",
   "main": "index.js",
   "repository": {

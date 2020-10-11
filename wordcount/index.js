@@ -1,30 +1,39 @@
-
-const tag = new RegExp('(<[^>]+>)', 'g');
-const entities = new RegExp('(&w+;)', 'gi');
+const tag = new RegExp("(<[^>]+>)", "g");
+const entities = new RegExp("(&w+;)", "gi");
 
 function htmlToPlainText(string) {
-    return `${string}`.trim().replace(tag, '').replace(entities, '');
+  return `${string || ""}`
+        .trim()
+        .replace(/\s+/g, " ")
+        .replace(tag, "")
+        .replace(entities, "")
+        .trim();
 }
 
 function plainTextMetadata(text) {
-    const words = text
-        .split(/\n+/)
-        .filter((s) => s)
-        .map((s) => s.split(/\s+/).length);
+  const words = `${text || ""}`
+    .trim()
+    .split(/\n+/)
+    .filter((s) => s)
+    .map((s) => s.split(/\s+/).length);
 
-    return { words };
+  return { words };
 }
 
 function wordCountCallback(value) {
-    const text = htmlToPlainText(value);
-    const { words } = plainTextMetadata(text);
+  const text = htmlToPlainText(value);
+  const { words } = plainTextMetadata(text);
 
-    return words.reduce((a, c) => a + c);
+  return words.reduce((a, c) => a + c);
 }
-
 
 function wordCount(eleventyConfig) {
-    eleventyConfig.addFilter('wordCount', wordCountCallback);
+  eleventyConfig.addFilter("wordCount", wordCountCallback);
 }
 
-module.exports = wordCount;
+module.exports = {
+  htmlToPlainText,
+  plainTextMetadata,
+  wordCountCallback,
+  wordCount,
+};
