@@ -1,0 +1,15 @@
+{
+  "name": "eleventy-plugin-wordcount",
+  "version": "1.0.0",
+  "description": "An eleventy plugin to calcutate an articles word count",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eleventy",
+    "wordcount"
+  ],
+  "author": "Bruce Thomas",
+  "license": "MIT"
+}
