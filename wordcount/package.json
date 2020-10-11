@@ -3,6 +3,10 @@
   "version": "1.0.2",
   "description": "An eleventy plugin to calcutate an articles word count",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fliptopbox/eleventy-plugin-wordcount.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
