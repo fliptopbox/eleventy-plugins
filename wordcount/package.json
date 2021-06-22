@@ -1,19 +1,22 @@
 {
   "name": "eleventy-plugin-wordcount",
-  "version": "1.0.5",
-  "description": "Eleventy plugin word count; which calcutates the number of words in a text corpus.",
+  "version": "1.0.6",
+  "description": "Eleventy plugin word count; which calculates the number of words in a text corpus.",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/fliptopbox/eleventy-plugins.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "eleventy",
     "wordcount"
   ],
   "author": "Bruce Thomas",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^27.0.5"
+  }
 }

@@ -5,6 +5,11 @@ test("Wordcount helper wordCountCallback", () => {
   expect(wc.wordCountCallback(html)).toBe(3);
 });
 
+test("Wordcount helper wordCountCallback, empty template", () => {
+  const html = "";
+  expect(wc.wordCountCallback(html)).toBe(0);
+});
+
 test("Wordcount helper htmlToPlainText", () => {
   const html = `
         <img src="./image.png" class="one two three">
