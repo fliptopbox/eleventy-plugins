@@ -23,7 +23,8 @@ function plainTextMetadata(text) {
 function wordCountCallback(value) {
   const text = htmlToPlainText(value);
   const { words } = plainTextMetadata(text);
-
+  
+  if (!words || !words.length) return 0;
   return words.reduce((a, c) => a + c);
 }
 
